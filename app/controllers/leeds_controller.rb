@@ -1,6 +1,6 @@
 class LeedsController < ApplicationController
   protect_from_forgery only: :create_leed
-  # before_action :authenticate_user!, only: [:overview]
+  before_action :authenticate_user!, only: [:overview]
 
   def home
     @gifts = Gift.where('quantity > ?', 0)
