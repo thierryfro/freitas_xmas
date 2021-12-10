@@ -2,6 +2,8 @@
     # Devise
     devise_for :users
 
-    get 'leeds/home'
-    get 'leeds/index'
+    root to: 'leeds#home'
+    get '/thanks', to: 'leeds#thanks'
+    get '/overview', to: 'leeds#overview'
+    post 'leeds/create_leed', to: 'leeds#create_leed'
 end

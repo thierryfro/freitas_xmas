@@ -1,2 +1,62 @@
-<h1>Leeds#home</h1>
-<p>Find me in app/views/leeds/home.html.erb</p>
+<header>
+    <div class="header-box-left home-object-1"></div>
+    <div class="header-box-right home-object-3"></div>
+    <div class="header-box-center">
+      <div class="logo">
+        <%= image_tag 'logo.svg' %>
+      </div>
+      <h1 class="header-title">Boas festas!</h1>
+      <p class="header-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd</p>
+    </div>
+  </header>
+  <div class="under-header home-object-2">
+    <div></div>
+  </div>
+  <section>
+    <div class="gifts-center">
+      <h1 class="gifts-title">Seu presente!</h1>
+      <div class="gifts-bar-bottom"></div>
+      <p class="gifts-description">Como agradecimento por ter sua confiança e parceria esse ano, gostaríamos de lhe entregar uma lembrancinha.</p>
+      <h6 class="gifts-subtitle">Selecione qual das opção abaixo você gostaria de receber</h6>
+    </div>
+
+    <form id="gift-product">
+      <div class="gifts-products">
+        <% @gifts.each do |gift| %>
+          <div class="gift-option">
+          <input class="gift-radio-input" type="radio" title="<%= gift.name %>" name="gift-radio-input" value="<%= gift.id %>" id="<%= gift.name %>">
+          <label for="<%= gift.name %>">
+            <div class="gift-option-img">
+              <%= image_tag gift.photo %>
+            </div>
+          </label>
+            <span class="gift-title"><%= gift.name %></span>
+          </div>
+        <% end %>
+      </div>
+  </section>
+  <hr class="divider"/>
+  <section>
+    <div id="gift-send">
+      <h3 class="gift-send-title">Em qual endereço deseja receber seu presente?</h3>
+      <input type="text" id="name-info" class="gift-send-name" placeholder="Digite seu nome" required>
+      <textarea required class="gift-send-address" id="address" name="address" placeholder="Rua, Avenida, número, complemento, bairro. &#10;Cidade - estado. CEP." style="height:200px"></textarea>
+      <input type="submit" id="save-info" class="gift-send-button pointer" value="Salvar" />
+    </div>
+  </form>
+  </section>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-box-left"></div>
+      <div class="footer-box-right"></div>
+      <div class="footer-box-center">
+        <h1 class="footer-title">Resumo</h1>
+        <div class="gifts-bar-bottom"></div>
+        <p class="footer-description">Você receberá <b id="gift-name">[Nome do produto]</b> no endereço <b id="user-address">[texto do box]</b>. Se estiver correto, só confirmar abaixo.</p>
+        <button type="button" id="send-info" class="footer-button">Confirmar</button>
+      </div>
+    </div>
+    <div class="copyright">
+      <span class="copyright-text">Copyright © 2021 Freitas Ferraz - Todos os direitos reservados</span>
+    </div>
+  </footer>

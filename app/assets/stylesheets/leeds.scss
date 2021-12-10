@@ -1,3 +1,530 @@
 // Place all the styles related to the Leeds controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+}
+
+html,body
+{
+  overflow-x: hidden; 
+}
+ 
+button { cursor: pointer; }
+
+/* ==================== Fonts ==================== */
+
+@font-face {
+  font-family: "Montserrat-ExtraLight";
+  src: asset-url('Montserrat-ExtraLight.ttf') format('truetype'),
+} 
+
+/* ==================== Body ==================== */
+
+body { font-family: 'Montserrat-ExtraLight'; }
+
+.container {
+  display: flex;
+  align-items: center;
+  text-align: -webkit-center;
+}
+
+.divider {
+  border-top: 1px solid #2e3b4273;
+  margin: 0;
+}
+
+section {
+  margin: 4rem 9rem;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h6 {
+  font-size: 18px;
+  color: #2E3B42;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/* ==================== Header ==================== */
+
+header {
+  color: #fff;
+  background: #2E3B42;
+  padding: 120px 0 120px 0;
+}
+
+.logo {
+  margin-bottom: 5rem;
+}
+
+.header-box-left {
+  position: relative;
+  background-repeat: no-repeat;
+  top: 18rem;
+  float: left;
+  width: 210px;
+  height: 210px;
+}
+
+.header-box-right {
+  position: relative;
+  background-repeat: no-repeat;
+  float: right;
+  right: 5rem;
+  top: -2rem;
+  width: 180px;
+  height: 150px;
+}
+
+.header-box-center {
+  text-align: -webkit-center;
+  display: flow-root;
+}
+
+.header-title {
+  margin: 4.5rem 0 4.5rem 0;
+  font-weight: 100;
+  text-transform: uppercase;
+ }
+
+.header-description {
+  width: 55%;
+  text-align: -webkit-center;
+  font-size: 20px;
+  margin-bottom: 5rem;
+}
+
+.under-header {
+  background: #7DA2A3;
+  height: 6rem;
+}
+
+.under-header > div {
+  position: relative;
+  background-repeat: no-repeat;
+  float: right;
+  top: -2rem;
+  right: 2.5rem;
+  width: 140px;
+  height: 115px;
+}
+
+
+.home-object-1 {
+  background-image: url(layout/object-1.svg);
+}
+
+.home-object-2 > div {
+  background-image: url(layout/object-2.svg);
+}
+
+.home-object-3 {
+  background-image: url(layout/object-3.svg);
+}
+
+.thanks-object-1 {
+  background-image: url(layout/thanks/object-1.svg);
+  top: 4rem;
+  left: 4rem;
+}
+
+.thanks-object-2 > div {
+  background-image: url(layout/thanks/object-2.svg);
+  top: -4rem;
+  right: 6rem;
+}
+
+.thanks-object-3 {
+  background-image: url(layout/thanks/object-3.svg);
+}
+
+/* ==================== Gifts Header ==================== */
+
+.gifts-center {
+  text-align-last: center;
+}
+
+.gifts-title {
+  font-weight: bold;
+  color: #2E3B42;
+  margin-bottom: 1rem;
+  -webkit-text-stroke: thin;
+}
+
+.gifts-bar-bottom {
+  height: 15px;
+  background-color: #ED1C24;
+  width: 13rem;
+  margin: auto;
+}
+
+.gifts-description {
+  padding: 0px 15rem;
+  text-align: center;
+  font-size: 18px;
+  margin: 4rem 0;
+}
+
+.gifts-subtitle {
+  -webkit-text-stroke: thin;
+  margin-bottom: 2.5rem;
+}
+
+/* ==================== Gifts Products ==================== */
+
+.gifts-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gift-option-img > img {
+  max-width: 265px;
+  border: 5px solid transparent;
+  position: relative;
+  top: 1.3rem;
+  padding-top: 21px;
+}
+
+.gift-title {
+  margin-top: 13.5rem;
+  font-size: 13px;
+}
+
+.gift-option input[type=radio]:checked + label > div {
+  box-shadow: 0px 0px 10px 4px #d9000dc4;
+  transition: 0.2s;
+}
+
+.gift-option input[type="radio"] {
+  -ms-transform: scale(2); /* IE 9 */
+  -webkit-transform: scale(2); /* Chrome, Safari, Opera */
+  transform: scale(2);
+}
+
+.gift-option input[type="radio"]:checked {
+  color: #ED1C24;
+  border-color: gray;
+}
+
+.gift-option-img {
+  border: 1px solid #2e3b4273;
+  width: 300px;
+  height: 330px;
+  text-align-last: center;
+  margin-bottom: 0.5rem;
+}
+
+.gift-radio-input {
+  position: relative;
+  top: 36px;
+  left: 19px;
+}
+
+div > input[type="radio"] {
+  display: none;
+}
+div > input[type="radio"] + *::before {
+  content: "";
+  display: inline-block;
+  vertical-align: bottom;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.3rem;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: gray;
+  position: relative;
+  top: 40px;
+  left: 15px;
+}
+div > input[type="radio"]:checked + * {
+  color: #242A2D;
+}
+div > input[type="radio"]:checked + *::before {
+  background: radial-gradient(#242A2D 0%, #242A2D 38%, transparent 45%, transparent);
+  border-color: #242A2D;
+  position: relative;
+  top: 40px;
+  left: 15px;
+}
+
+/* ==================== Gift Send ==================== */
+
+#gift-send {
+  display: flex;
+  flex-direction: column;
+}
+
+.gift-send-title {
+  -webkit-text-stroke: thin;
+}
+
+.gift-send-name {
+  border: 1px solid #2e3b4273;
+  width: 54%;
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.gift-send-address {
+  border: 1px solid #2e3b4273;
+  width: 54%;
+  padding: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.gift-send-button {
+  text-transform: uppercase;
+  border: 2px solid #D9000D;
+  width: 8rem;
+  padding: 1rem;
+  color: #D9000D;
+  background: #ff000000;
+}
+
+/* ==================== Footer ==================== */
+
+footer {
+  background: #7DA2A3;
+}
+
+.footer-container {
+  padding: 2rem 4.5rem;
+}
+
+.footer-box-left {
+  position: relative;
+  top: 3.5rem;
+  float: left;
+  background-image: url(layout/object-4.svg);
+  width: 210px;
+  height: 210px;
+  background-repeat: no-repeat;
+}
+
+.footer-box-right {
+  position: relative;
+  right: -4rem;
+  float: right;
+  top: 18rem;
+  background-image: url(layout/object-5.svg);
+  width: 180px;
+  height: 150px;
+  background-repeat: no-repeat;
+}
+
+.footer-box-center {
+  text-align: -webkit-center;
+  display: flow-root;
+  margin-top: 3rem;
+}
+
+.footer-title {
+  font-weight: bold;
+  color: #2E3B42;
+  margin-bottom: 1rem;
+  -webkit-text-stroke: thin;
+}
+
+.footer-description {
+  padding: 0px 8rem;
+  text-align: center;
+  font-size: 18px;
+  margin: 2rem 0;
+  line-height: 2rem;
+}
+
+.footer-button {
+  text-transform: uppercase;
+  border: 2px solid #242A2D;
+  width: 12rem;
+  padding: 1rem;
+  color: #242A2D;
+  background: #ff000000;
+  margin-bottom: 4rem;
+}
+
+.copyright {
+  height: 5rem;
+  background: #2E3B42;
+  text-align: center;
+  color: #fff;
+}
+
+.copyright-text {
+  position: relative;
+  top: 40%;
+}
+
+/* ==================== Sign in ==================== */
+
+.sign-in-input-div {
+  margin-bottom: 1rem;
+}
+
+.sign-in-remember {
+  margin-bottom: 0.7rem;
+}
+
+.sign-in-input {
+  padding: 0.4rem;
+  border-radius: 4px;
+  width: 40%;
+  margin: 0.5rem 0;
+}
+
+.sign-in-button {
+  padding: 1rem 1.7rem;
+  width: 42%;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.sign-in-button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* ==================== Table Info ==================== */
+
+#table-info {
+  padding: 2rem;
+}
+
+/* ==================== Responsive ==================== */
+
+
+@media (max-width: 768px) {
+  header {
+    width: 100%;
+  }
+  section {
+    margin: 0;
+  }
+  .home-object-1 {
+    position: absolute;
+    width: 130px;
+    height: 145px;
+    top: 14rem;
+  }
+  .home-object-3 {
+    right: 7rem;
+    top: -12rem;
+  }
+  .header-box-center {
+    display: inline;
+  }
+  .logo {
+    text-align: right;
+    margin-bottom: 7rem;
+  }
+  .under-header {
+    width: 100%;
+  }
+  section {
+    width: 100%;
+  }
+  .gifts-description {
+    padding: 0;
+  }
+  .gifts-products {
+    justify-content: center;
+  }
+  .gift-option-img {
+    width: 450px;
+  }
+  .gifts-title {
+    margin-left: 8rem;
+    margin-top: 1rem;
+  }
+  #gift-send {
+    margin: 2rem;
+  }
+  .gift-send-title {
+    text-align: center;
+  }
+  .gift-send-address {
+    width: 87%;
+  }
+  .gift-send-button {
+    place-self: center;
+  }
+  .footer-box-left {
+    right: 5rem;
+    width: 120px;
+    height: 145px;
+    top: 0;
+  }
+  .footer-description {
+    padding: 0;
+  }
+  .footer-box-center {
+    display: block;
+  }
+  .footer-box-right {
+    top: 19rem;
+  }
+}
+
+@media (max-width: 603px) {
+  .footer-box-right {
+    top: 28rem;
+  }
+  .gifts-title {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 445px) {
+  .footer-box-right {
+    position: absolute;
+    inset: auto;
+    margin: 14rem;
+    margin-top: 24rem;
+  }
+  .gift-option-img {
+    width: 260px;
+  }
+  .gifts-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 428px) {
+  .footer-box-right {
+    margin-top: 30rem;
+  }
+  .logo {
+    padding: 1rem 6.5rem;
+  }
+  .home-object-1 {
+    width: 100px;
+    height: 130px;
+  }
+  .footer-box-right {
+    display: none;
+  }
+}
+
+@media (max-width: 385px) {
+  .gifts-title {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 1536px) {
+  
+}

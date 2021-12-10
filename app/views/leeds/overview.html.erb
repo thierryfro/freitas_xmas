@@ -1,0 +1,30 @@
+<header>
+  <div class="header-box-center">
+    <div class="logo">
+      <%= image_tag 'logo.svg' %>
+    </div>
+  <table id="table-info">
+    <tr>
+      <th>Nome</th>
+      <th>Endereço</th>
+      <th>Presente</th>
+    </tr>
+    <% @leeds.each do |leed| %>
+      <tr>
+        <td><%= leed.first_name %></td>
+        <td><%= leed.address %></td>
+        <td><%= leed.gift.name %></td>
+      </tr>
+    <% end %>
+  </table>
+    </div>
+</header>
+<div class="under-header thanks-object-2" style="padding-bottom: 1.2rem;">
+</div>
+  <div></div>
+</div>
+<footer>
+  <div class="copyright">
+    <span class="copyright-text">Copyright © 2021 Freitas Ferraz - Todos os direitos reservados</span>
+  </div>
+</footer>
