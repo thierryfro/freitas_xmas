@@ -400,8 +400,27 @@ footer {
 
 /* ==================== Table Info ==================== */
 
+.overview-logo {
+  text-align: center;
+  margin-bottom: 7rem;
+}
+
 #table-info {
   padding: 2rem;
+  margin: 0 2rem;
+  border: 2px solid #101010d1;
+  box-shadow: 7px 9px #00000070;
+}
+
+#table-info th {
+  padding: 0.5rem;
+  width: 20%;
+  background-color: #00000030;
+}
+
+#table-info td, th {
+  text-align: left;
+  padding: 5px;
 }
 
 /* ==================== Responsive ==================== */
