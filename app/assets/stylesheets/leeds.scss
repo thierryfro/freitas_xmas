@@ -425,6 +425,11 @@ footer {
 
 /* ==================== Responsive ==================== */
 
+@media (max-width: 1024px) {
+  .footer-description {
+    padding: 0;
+  }
+}
 
 @media (max-width: 768px) {
   header {
@@ -437,18 +442,22 @@ footer {
     position: absolute;
     width: 130px;
     height: 145px;
-    top: 14rem;
+    top: 17rem;
+  }
+  .under-header > div {
+    position: absolute;
+    top: 47rem;
   }
   .home-object-3 {
+    position: absolute;
     right: 7rem;
-    top: -12rem;
+    top: -4rem;
   }
   .header-box-center {
     display: inline;
   }
   .logo {
-    text-align: right;
-    margin-bottom: 7rem;
+    margin: 3rem 0;
   }
   .under-header {
     width: 100%;
@@ -457,7 +466,7 @@ footer {
     width: 100%;
   }
   .gifts-description {
-    padding: 0;
+    padding: 1rem 2rem;
   }
   .gifts-products {
     justify-content: center;
@@ -466,7 +475,6 @@ footer {
     width: 450px;
   }
   .gifts-title {
-    margin-left: 8rem;
     margin-top: 1rem;
   }
   #gift-send {
@@ -482,28 +490,43 @@ footer {
     place-self: center;
   }
   .footer-box-left {
-    right: 5rem;
+    position: absolute;
     width: 120px;
     height: 145px;
-    top: 0;
-  }
-  .footer-description {
-    padding: 0;
+    left: 0rem;
+    top: 280rem;
   }
   .footer-box-center {
     display: block;
   }
   .footer-box-right {
-    top: 19rem;
+    top: 300rem;
+    position: absolute;
   }
 }
 
 @media (max-width: 603px) {
   .footer-box-right {
-    top: 28rem;
+    top: 304rem;
   }
-  .gifts-title {
-    font-size: 27px;
+  .under-header > div {
+    top: 50rem;
+  }
+  .gifts-subtitle {
+    padding: 0rem 2rem;
+    text-align: -webkit-center;
+  }
+  .footer-box-left {
+    top: 286rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-box-right {
+    display: none;
+  }
+  .footer-box-left {
+    display: none;
   }
 }
 
@@ -515,10 +538,18 @@ footer {
     margin-top: 24rem;
   }
   .gift-option-img {
-    width: 260px;
+    display: inline-table;
+    max-width: 100%;
+    width: 100%;
   }
-  .gifts-title {
-    font-size: 20px;
+  .under-header > div {
+    top: 55rem;
+  }
+  .gift-option {
+    padding: 2rem;
+  }
+  .footer-box-right {
+    display: none;
   }
 }
 
@@ -526,24 +557,17 @@ footer {
   .footer-box-right {
     margin-top: 30rem;
   }
-  .logo {
-    padding: 1rem 6.5rem;
-  }
   .home-object-1 {
     width: 100px;
     height: 130px;
   }
-  .footer-box-right {
-    display: none;
-  }
 }
 
 @media (max-width: 385px) {
-  .gifts-title {
-    font-size: 10px;
+  .home-object-1 {
+    display: none;
   }
-}
-
-@media (min-width: 1536px) {
-  
+  .under-header > div {
+    display: none;
+  }
 }
