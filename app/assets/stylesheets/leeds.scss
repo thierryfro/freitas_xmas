@@ -162,8 +162,12 @@ header {
 /* ==================== Gifts Header ==================== */
 
 .gifts-center {
-  -moz-text-align-last: center;
-       text-align-last: center;
+  text-align-last: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  moz-text-align-last: center;
 }
 
 .gifts-title {
@@ -244,6 +248,9 @@ header {
   -moz-text-align-last: center;
        text-align-last: center;
   margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
 }
 
 .gift-radio-input {
