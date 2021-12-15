@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 // Place all the styles related to the Leeds controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
@@ -28,8 +35,12 @@ button { cursor: pointer; }
 body { font-family: 'Montserrat-ExtraLight'; }
 
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: -webkit-center;
 }
 
@@ -151,7 +162,8 @@ header {
 /* ==================== Gifts Header ==================== */
 
 .gifts-center {
-  text-align-last: center;
+  -moz-text-align-last: center;
+       text-align-last: center;
 }
 
 .gifts-title {
@@ -183,9 +195,14 @@ header {
 /* ==================== Gifts Products ==================== */
 
 .gifts-products {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .gift-option-img > img {
@@ -202,7 +219,10 @@ header {
 }
 
 .gift-option input[type=radio]:checked + label > div {
-  box-shadow: 0px 0px 10px 4px #d9000dc4;
+  -webkit-box-shadow: 0px 0px 10px 4px #d9000dc4;
+          box-shadow: 0px 0px 10px 4px #d9000dc4;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
 }
 
@@ -221,7 +241,8 @@ header {
   border: 1px solid #2e3b4273;
   width: 300px;
   height: 330px;
-  text-align-last: center;
+  -moz-text-align-last: center;
+       text-align-last: center;
   margin-bottom: 0.5rem;
 }
 
@@ -253,6 +274,7 @@ div > input[type="radio"]:checked + * {
   color: #242A2D;
 }
 div > input[type="radio"]:checked + *::before {
+  background: -o-radial-gradient(#242A2D 0%, #242A2D 38%, transparent 45%, transparent);
   background: radial-gradient(#242A2D 0%, #242A2D 38%, transparent 45%, transparent);
   border-color: #242A2D;
   position: relative;
@@ -263,8 +285,13 @@ div > input[type="radio"]:checked + *::before {
 /* ==================== Gift Send ==================== */
 
 #gift-send {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .gift-send-title {
@@ -409,7 +436,8 @@ footer {
   padding: 2rem;
   margin: 0 2rem;
   border: 2px solid #101010d1;
-  box-shadow: 7px 9px #00000070;
+  -webkit-box-shadow: 7px 9px #00000070;
+          box-shadow: 7px 9px #00000070;
 }
 
 #table-info th {
@@ -424,6 +452,15 @@ footer {
 }
 
 /* ==================== Responsive ==================== */
+
+@media (max-width: 900px) {
+  .gifts-description {
+    padding: 0px 8rem;
+  }
+  .gifts-products {
+    justify-content: center;
+  }
+}
 
 @media (max-width: 1024px) {
   .footer-description {
@@ -469,7 +506,9 @@ footer {
     padding: 1rem 2rem;
   }
   .gifts-products {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .gift-option-img {
     width: 450px;
@@ -487,6 +526,8 @@ footer {
     width: 87%;
   }
   .gift-send-button {
+    -ms-grid-row-align: center;
+    -ms-grid-column-align: center;
     place-self: center;
   }
   .footer-box-left {
