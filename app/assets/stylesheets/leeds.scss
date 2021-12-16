@@ -206,7 +206,11 @@ header {
       flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-evenly;
+          justify-content: center;
+}
+
+.gift-option {
+  padding: 1rem;
 }
 
 .gift-option-img > img {
