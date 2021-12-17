@@ -6,8 +6,10 @@
         <%= image_tag 'logo.svg' %>
       </div>
       <h1 class="header-title">Obrigado!</h1>
-      <p class="header-description" style="margin-bottom: 2rem;">Aproveite e confira as últimas<br> novidades no nosso LinkedIn</p>
-      <%= image_tag 'linkedin.svg', class: 'pointer' %>
+      <p class="header-description thanks-header-description" style="margin-bottom: 2rem;">Aproveite e confira as últimas<br> novidades no nosso LinkedIn</p>
+      <%= link_to 'https://www.linkedin.com/company/freitasferrazadv/' do %>
+        <%= image_tag 'linkedin.svg', class: 'pointer', style: 'display: block;' %>
+      <% end %>
     </div>
   </header>
   <div class="under-header thanks-object-2" style="padding-bottom: 1.2rem;">
