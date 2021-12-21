@@ -14,7 +14,6 @@ class LeedsController < ApplicationController
   end
 
   def create_leed
-    byebug
     leed = Leed.new(gift_id: params['gift'], first_name: params['name'], address: params['address'], birthday: params['birthday'])
     gift = Gift.find(leed.gift_id)
     # byebug
