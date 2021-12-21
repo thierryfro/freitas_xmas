@@ -6,12 +6,14 @@
   <table id="table-info">
     <tr>
       <th>Nome</th>
+      <th>Aniversário</th>
       <th>Endereço</th>
       <th>Presente</th>
     </tr>
     <% @leeds.each do |leed| %>
       <tr>
         <td><%= leed.first_name %></td>
+        <td><%= leed&.birthday %></td>
         <td><%= leed.address %></td>
         <td><%= leed.gift.name %></td>
       </tr>

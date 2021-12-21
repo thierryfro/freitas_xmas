@@ -2,6 +2,7 @@
   let gift;
   let address;
   let name;
+  let birthday;
   let send = false;
 
   (function getInfo() {
@@ -20,7 +21,8 @@
         gift = document.querySelector('input[name="gift-radio-input"]:checked');
         name = document.getElementById("name-info").value;
         address = document.getElementById("address").value;
-    
+        birthday = document.getElementById("birthday").value;
+
         document.getElementById("gift-name").innerText = gift.title;
         document.getElementById("user-address").innerText = address;
         send = true
@@ -38,13 +40,14 @@
           gift,
           name,
           address,
+          birthday,
         }
         fetch('./leeds/create_leed', {
           method: "POST",
           body: JSON.stringify(_data),
           headers: {"Content-type": "application/json; charset=UTF-8"}
         })
-        .then(() => window.location.href = "./thanks") 
+        .then(() => window.location.href = "./thanks")
         .catch(() => alert('Algo saiu errado!'));
       };
     });
